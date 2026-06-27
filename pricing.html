@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vercel Demo — Pricing</title>
+  <meta name="description" content="Pricing plans for the vercel-demo site." />
+  <meta name="theme-color" content="#0ea5a4">
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#071024 0%, #081228 60%); color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;backdrop-filter:blur(6px);background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-bottom:1px solid rgba(255,255,255,0.03)}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#06b6d4,#3b82f6);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#001}
+    nav a{margin-left:1rem;font-size:.95rem;color:var(--muted)}
+    .container{max-width:1000px;margin:3.5rem auto;padding:0 1.25rem}
+    h1{margin:0;font-size:2rem}
+    p.lead{color:var(--muted);margin-top:.5rem;font-size:1.05rem}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;align-items:stretch}
+    .card{background:var(--card);padding:1.25rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 20px rgba(2,6,23,0.6);display:flex;flex-direction:column}
+    .card.featured{border-color:rgba(6,182,212,0.35);box-shadow:0 8px 28px rgba(6,182,212,0.12)}
+    .plan-label{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0}
+    .price{margin:.5rem 0 0;font-size:2rem;font-weight:700;line-height:1}
+    .price span{font-size:.95rem;font-weight:400;color:var(--muted)}
+    .plan-desc{color:var(--muted);margin:.75rem 0 0;font-size:.95rem}
+    .plan-list{list-style:none;padding:0;margin:1rem 0 0;flex:1}
+    .plan-list li{padding:.45rem 0;color:var(--muted);font-size:.92rem;display:flex;gap:.5rem;align-items:flex-start}
+    .plan-list li::before{content:"✓";color:var(--accent);font-weight:700;flex-shrink:0}
+    .btn{display:block;text-align:center;margin-top:1.25rem;background:var(--accent);color:#042022;padding:.6rem .9rem;border-radius:8px;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .tag{display:inline-block;margin-top:.5rem;padding:.2rem .5rem;border-radius:6px;background:rgba(6,182,212,0.15);color:var(--accent);font-size:.75rem;font-weight:600}
+    footer{margin-top:3.5rem;padding:1.25rem 0;color:var(--muted);text-align:center;font-size:.9rem}
+    @media(max-width:800px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="logo">VD</span>
+      <div>
+        <div style="font-weight:700">vercel-demo</div>
+        <div style="font-size:.8rem;color:var(--muted)">A minimal demo site</div>
+      </div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="https://github.com/miniraj-sns/vercel-demo" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Pricing</h1>
+    <p class="lead">Simple plans for demos, side projects, and small teams. All tiers deploy to Vercel with zero config.</p>
+
+    <section id="pricing" style="margin-top:1.25rem">
+      <div class="grid">
+        <div class="card">
+          <p class="plan-label">Starter</p>
+          <p class="price">$0 <span>/ month</span></p>
+          <p class="plan-desc">Everything you need to ship a static demo.</p>
+          <ul class="plan-list">
+            <li>1 production deployment</li>
+            <li>Static HTML &amp; CSS hosting</li>
+            <li>Automatic HTTPS</li>
+            <li>Community support</li>
+          </ul>
+          <a class="btn ghost" href="https://vercel.com/new?utm_source=github&repository-url=https://github.com/miniraj-sns/vercel-demo" target="_blank" rel="noopener">Get started</a>
+        </div>
+
+        <div class="card featured">
+          <span class="tag">Most popular</span>
+          <p class="plan-label">Pro</p>
+          <p class="price">$12 <span>/ month</span></p>
+          <p class="plan-desc">For growing projects that need more bandwidth and previews.</p>
+          <ul class="plan-list">
+            <li>Unlimited preview deployments</li>
+            <li>Custom domain support</li>
+            <li>Analytics dashboard</li>
+            <li>Email support</li>
+          </ul>
+          <a class="btn" href="https://vercel.com/new?utm_source=github&repository-url=https://github.com/miniraj-sns/vercel-demo" target="_blank" rel="noopener">Start free trial</a>
+        </div>
+
+        <div class="card">
+          <p class="plan-label">Team</p>
+          <p class="price">$29 <span>/ month</span></p>
+          <p class="plan-desc">Collaborate with your team on multiple sites.</p>
+          <ul class="plan-list">
+            <li>Everything in Pro</li>
+            <li>Shared team dashboard</li>
+            <li>Role-based access</li>
+            <li>Priority support</li>
+          </ul>
+          <a class="btn ghost" href="https://github.com/miniraj-sns/vercel-demo/issues" target="_blank" rel="noopener">Contact sales</a>
+        </div>
+      </div>
+
+      <div style="margin-top:1.25rem" class="card">
+        <h3 style="margin-top:0">FAQ</h3>
+        <p style="color:var(--muted);margin:.75rem 0 0"><strong style="color:#e6eef6">Can I change plans later?</strong><br>Yes — upgrade or downgrade anytime from your Vercel dashboard.</p>
+        <p style="color:var(--muted);margin:.75rem 0 0"><strong style="color:#e6eef6">Is there a free tier?</strong><br>The Starter plan is free forever for hobby and demo projects.</p>
+      </div>
+    </section>
+
+    <footer>
+      Back to <a href="/">home</a> • Built by <strong>miniraj-sns</strong>
+    </footer>
+  </main>
+</body>
+</html>
