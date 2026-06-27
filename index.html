@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vercel Demo — Home</title>
+  <meta name="description" content="A small demo site for the vercel-demo repository." />
+  <meta name="theme-color" content="#0ea5a4">
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#071024 0%, #081228 60%); color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;backdrop-filter:blur(6px);background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-bottom:1px solid rgba(255,255,255,0.03)}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#06b6d4,#3b82f6);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#001}
+    nav a{margin-left:1rem;font-size:.95rem;color:var(--muted)}
+    .container{max-width:1000px;margin:3.5rem auto;padding:0 1.25rem}
+    .hero{display:flex;gap:2rem;align-items:center}
+    .hero-content{flex:1}
+    h1{margin:0;font-size:2.25rem;line-height:1.05}
+    p.lead{color:var(--muted);margin-top:.75rem;font-size:1.05rem}
+    .cta{margin-top:1.25rem;display:flex;gap:.75rem}
+    .btn{background:var(--accent);color:#042022;padding:.6rem .9rem;border-radius:8px;font-weight:600;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .card{background:var(--card);padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+    .feature h3{margin:0 0 .5rem 0}
+    footer{margin-top:3.5rem;padding:1.25rem 0;color:var(--muted);text-align:center;font-size:.9rem}
+    @media(max-width:800px){.hero{flex-direction:column}.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="logo">VD</span>
+      <div>
+        <div style="font-weight:700">vercel-demo</div>
+        <div style="font-size:.8rem;color:var(--muted)">A minimal demo site</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#features">Features</a>
+      <a href="https://github.com/miniraj-sns/vercel-demo" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Deploy a small demo to Vercel in seconds</h1>
+        <p class="lead">This repository contains a minimal homepage to demonstrate a Vercel deployment. Use it as a starting point for static sites, quick demos, or learning projects.</p>
+        <div class="cta">
+          <a class="btn" href="https://vercel.com/new?utm_source=github&repository-url=https://github.com/miniraj-sns/vercel-demo" target="_blank" rel="noopener">Deploy to Vercel</a>
+          <a class="btn ghost" href="https://github.com/miniraj-sns/vercel-demo" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+      <div style="width:380px;" class="card">
+        <h3 style="margin-top:0">Quick Start</h3>
+        <ol style="color:var(--muted);padding-left:1.05rem">
+          <li>Fork or clone the repository</li>
+          <li>Push changes and connect to Vercel</li>
+          <li>Visit your production URL</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="features" style="margin-top:2.25rem">
+      <div class="grid">
+        <div class="card feature">
+          <h3>Fast</h3>
+          <p style="color:var(--muted);margin:0">Static HTML with a lightweight stylesheet ensures fast load times and simple CI/CD.</p>
+        </div>
+        <div class="card feature">
+          <h3>Accessible</h3>
+          <p style="color:var(--muted);margin:0">Semantic markup and sensible defaults so the page works well across devices and assistive tech.</p>
+        </div>
+        <div class="card feature">
+          <h3>Customizable</h3>
+          <p style="color:var(--muted);margin:0">Drop in your own content, add pages, or plug into a framework later on.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Built by <strong>miniraj-sns</strong> • <a href="https://github.com/miniraj-sns/vercel-demo" target="_blank" rel="noopener">miniraj-sns/vercel-demo</a>
+    </footer>
+  </main>
+</body>
+</html>
