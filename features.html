@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vercel Demo — Features</title>
+  <meta name="description" content="Features of the vercel-demo site." />
+  <meta name="theme-color" content="#0ea5a4">
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#071024 0%, #081228 60%); color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;backdrop-filter:blur(6px);background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-bottom:1px solid rgba(255,255,255,0.03)}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#06b6d4,#3b82f6);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#001}
+    nav a{margin-left:1rem;font-size:.95rem;color:var(--muted)}
+    .container{max-width:1000px;margin:3.5rem auto;padding:0 1.25rem}
+    h1{margin:0;font-size:2rem}
+    p.lead{color:var(--muted);margin-top:.5rem;font-size:1.05rem}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem}
+    .card{background:var(--card);padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .feature-list{list-style:none;padding:0;margin:0}
+    .feature-list li{padding:.8rem;border-bottom:1px dashed rgba(255,255,255,0.03);display:flex;gap:.75rem;align-items:flex-start}
+    .feature-list li:last-child{border-bottom:none}
+    .badge{width:38px;height:38px;border-radius:8px;background:linear-gradient(135deg,#06b6d4,#3b82f6);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:#001}
+    footer{margin-top:3.5rem;padding:1.25rem 0;color:var(--muted);text-align:center;font-size:.9rem}
+    @media(max-width:800px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="logo">VD</span>
+      <div>
+        <div style="font-weight:700">vercel-demo</div>
+        <div style="font-size:.8rem;color:var(--muted)">A minimal demo site</div>
+      </div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#features">Features</a>
+      <a href="https://github.com/miniraj-sns/vercel-demo" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Features</h1>
+    <p class="lead">A concise list of the decisions and features included in this minimal demo site.</p>
+
+    <section id="features" style="margin-top:1.25rem">
+      <div class="grid">
+        <div class="card">
+          <h3 style="margin-top:0">Core</h3>
+          <ul class="feature-list" style="margin-top:.75rem">
+            <li>
+              <div class="badge">1</div>
+              <div>
+                <strong>Static, fast, and simple</strong>
+                <div style="color:var(--muted);margin-top:.35rem">Pure HTML/CSS with no build step — ideal for demos and quick prototypes.</div>
+              </div>
+            </li>
+            <li>
+              <div class="badge">2</div>
+              <div>
+                <strong>Responsive layout</strong>
+                <div style="color:var(--muted);margin-top:.35rem">Mobile-first styles and a flexible grid that adapts to small screens.</div>
+              </div>
+            </li>
+            <li>
+              <div class="badge">3</div>
+              <div>
+                <strong>Accessible markup</strong>
+                <div style="color:var(--muted);margin-top:.35rem">Semantic structure and clear contrast choices to help assistive technologies.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top:0">Integration</h3>
+          <ul class="feature-list" style="margin-top:.75rem">
+            <li>
+              <div class="badge">4</div>
+              <div>
+                <strong>Deploy to Vercel</strong>
+                <div style="color:var(--muted);margin-top:.35rem">One-click deploy link is included on the homepage and works with public GitHub repositories.</div>
+              </div>
+            </li>
+            <li>
+              <div class="badge">5</div>
+              <div>
+                <strong>Repository-first</strong>
+                <div style="color:var(--muted);margin-top:.35rem">Files are intentionally simple so maintainers can add frameworks or CI as needed.</div>
+              </div>
+            </li>
+            <li>
+              <div class="badge">6</div>
+              <div>
+                <strong>Easy to extend</strong>
+                <div style="color:var(--muted);margin-top:.35rem">Add new pages, a CSS preprocessor, or convert to a static site generator with minimal changes.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:1.25rem" class="card">
+        <h3 style="margin-top:0">Examples & tips</h3>
+        <p style="color:var(--muted);margin:0">- Add a favicon at <code>/favicon.ico</code> for a polished experience.<br>- Consider adding a sitemap and robots.txt if you plan to publish widely.<br>- Use the provided one-click Vercel link to preview deployments quickly.</p>
+      </div>
+    </section>
+
+    <footer>
+      Back to <a href="/">home</a> • Built by <strong>miniraj-sns</strong>
+    </footer>
+  </main>
+</body>
+</html>
